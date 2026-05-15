@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federal Anchor Transmission: Political Opposition and Risk Mitigation</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    color: #1f2937;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    background: #fafafa;
+  }
+  h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    border-bottom: 3px solid #b45309;
+    padding-bottom: 0.6rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+  }
+  h2 {
+    font-size: 1.55rem;
+    color: #0f172a;
+    margin-top: 3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1.5px solid #d1d5db;
+    line-height: 1.3;
+  }
+  h2 .anchor-tag, h3 .anchor-tag {
+    font-size: 0.65em;
+    color: #9ca3af;
+    font-weight: normal;
+    margin-left: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    text-decoration: none;
+  }
+  h2:hover .anchor-tag, h3:hover .anchor-tag { opacity: 1; }
+  h3 {
+    font-size: 1.2rem;
+    color: #334155;
+    margin-top: 2rem;
+    line-height: 1.35;
+  }
+  p { margin: 0.85rem 0; }
+  em { font-style: italic; }
+  strong { color: #111827; }
+  ul, ol { margin: 0.8rem 0; padding-left: 1.5rem; }
+  li { margin: 0.5rem 0; }
+  a { color: #b45309; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+.subtitle {
+color: #6b7280;
+font-style: italic;
+font-size: 1.05rem;
+margin-bottom: 0.5rem;
+}
+
+.author {
+color: #4b5563;
+font-size: 0.98rem;
+margin: -0.25rem 0 2rem;
+padding-bottom: 0.75rem;
+border-bottom: 1px solid #e5e7eb;
+}
+.author a { color: #b45309; font-weight: 500; }
+.author .version-info {
+display: block;
+font-size: 0.88rem;
+color: #6b7280;
+margin-top: 0.3rem;
+font-weight: 400;
+}
+
+/* Back-link to main proposal */
+.main-doc-link {
+background: white;
+border: 1px solid #e5e7eb;
+border-left: 4px solid #047857;
+border-radius: 4px;
+padding: 0.85rem 1.25rem;
+margin: 1.5rem 0 2.5rem;
+font-size: 0.97rem;
+}
+.main-doc-link strong { color: #064e3b; }
+.main-doc-link a { color: #047857; font-weight: 600; }
+
+/* Table of contents */
+.toc {
+background: white;
+border: 1px solid #e5e7eb;
+border-radius: 10px;
+padding: 1.5rem 1.75rem;
+box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+margin: 2rem 0 3rem;
+}
+.toc h2 {
+margin: 0 0 1rem;
+border: none;
+padding-bottom: 0;
+font-size: 1.15rem;
+color: #4b5563;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+}
+.toc ol {
+margin: 0;
+padding-left: 1.4rem;
+counter-reset: toc-counter;
+list-style: none;
+}
+.toc > ol > li {
+counter-increment: toc-counter;
+margin: 0.4rem 0;
+position: relative;
+}
+.toc > ol > li::before {
+content: counter(toc-counter) “.”;
+position: absolute;
+left: -1.4rem;
+color: #6b7280;
+font-weight: 600;
+width: 1.4rem;
+}
+.toc ol ol {
+counter-reset: toc-sub-counter;
+padding-left: 1.5rem;
+margin: 0.25rem 0 0.4rem;
+}
+.toc ol ol li {
+counter-increment: toc-sub-counter;
+margin: 0.2rem 0;
+font-size: 0.97em;
+color: #4b5563;
+position: relative;
+}
+.toc ol ol li::before {
+content: counter(toc-counter) “.” counter(toc-sub-counter);
+position: absolute;
+left: -2rem;
+color: #9ca3af;
+font-weight: 600;
+width: 1.8rem;
+}
+.toc a { color: #1e40af; }
+.toc a:hover { color: #b45309; text-decoration: underline; }
+
+/* Summary box at the top — uses amber (companion to the main proposal’s green) */
+.summary {
+background: #fef3c7;
+border: 1.5px solid #b45309;
+border-left: 5px solid #b45309;
+border-radius: 8px;
+padding: 1.5rem 2rem;
+margin: 2rem 0 3rem;
+}
+.summary h2 {
+margin-top: 0;
+border: none;
+color: #713f12;
+padding-bottom: 0.3rem;
+border-bottom: 1.5px solid #fde68a;
+}
+.summary > p {
+color: #713f12;
+font-size: 1.02rem;
+}
+.summary ul {
+list-style: none;
+padding-left: 0;
+counter-reset: bullet-counter;
+}
+.summary li {
+counter-increment: bullet-counter;
+position: relative;
+padding: 0.3rem 0 0.5rem 2.4rem;
+margin: 0.5rem 0;
+border-bottom: 1px dashed #fde68a;
+}
+.summary li:last-child { border-bottom: none; }
+.summary li::before {
+content: counter(bullet-counter);
+position: absolute;
+left: 0;
+top: 0.45rem;
+width: 1.7rem;
+height: 1.7rem;
+background: #b45309;
+color: white;
+border-radius: 50%;
+text-align: center;
+line-height: 1.7rem;
+font-weight: 700;
+font-size: 0.9rem;
+}
+
+/* Back-to-top link at the end of major sections */
+.back-to-top {
+display: block;
+text-align: right;
+margin: 1.5rem 0 0;
+font-size: 0.85rem;
+color: #6b7280;
+}
+.back-to-top a { color: #6b7280; }
+.back-to-top a:hover { color: #b45309; }
+
+@media (max-width: 700px) {
+body { padding: 1.25rem 1rem 3rem; font-size: 0.97rem; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.3rem; }
+.summary { padding: 1.25rem 1.25rem; }
+.summary li { padding-left: 2rem; }
+}
+</style>
+
+</head>
+<body>
+
+<a id="top"></a>
+
+<h1>Federal Anchor Transmission: Political Opposition and Risk Mitigation</h1>
+<p class="subtitle">Companion document to <em>Federal Anchor Transmission: A Proposal for Interregional Buildout Through Federally-Built Clean Firm Generation</em></p>
+<p class="author">Fred Stafford &nbsp;·&nbsp; <a href="mailto:fred@publicpowerreview.org">fred@publicpowerreview.org</a><span class="version-info">Version 1.0 &nbsp;·&nbsp; May 15, 2026</span></p>
+
+<div class="main-doc-link">
+  <strong>Main proposal:</strong> The structural architecture of the Federal Anchor Transmission Program is developed in the main proposal document, <a href="federal-anchor-transmission-proposal.html">Federal Anchor Transmission: A Proposal for Interregional Buildout</a>. This companion document analyzes the organized political opposition that proposal would face and outlines specific structural concessions that could reduce it. The two documents are intended to be read together; the mitigation strategies described here would be incorporated into the program's authorizing legislation alongside the architecture in the main proposal.
+</div>
+
+<!-- ===== SUMMARY OF THE OPPOSITION/MITIGATION ANALYSIS ===== -->
+
+<section class="summary" id="summary">
+<h2>Summary</h2>
+
+<p>This companion document maps the opposition landscape and proposes a coherent mitigation package. Its key findings:</p>
+
+<ul>
+<li><strong>Four distinct opposition groups.</strong> Adjacent IOU partners (Southern, Duke, Dominion, AEP) cast as offtakers rather than generators; non-adjacent IOUs (Ameren, Evergy, FirstEnergy, NextEra, Xcel) organized through the Edison Electric Institute and competitively disadvantaged relative to adjacent IOUs; independent power producers led by Constellation, whose hyperscaler PPA business model the program directly threatens; and state PUCs in jurisdictions skeptical of federal involvement in state-regulated retail markets.</li>
+
+<li><strong>Adjacent IOU opposition is the most politically tractable.</strong> Southern, Duke, and Dominion each face a specific demotion from being the dominant in-territory generation builder to being the wholesale buyer and retail intermediary. This is real and worth addressing, but they also gain meaningful new benefits (transmission rate base, preserved retail relationships, firm clean capacity at federally-financed cost) — so the opposition is conditional rather than absolute, and can be converted to support through structural concessions.</li>
+
+<li><strong>The Edison Electric Institute opposition is the broadest and most predictable.</strong> IOUs in regions without TVA adjacency will view the program as creating an unlevel competitive playing field favoring adjacent IOUs. EEI has historically been highly effective at killing federal energy proposals that threaten member interests. Its opposition is structural rather than terms-negotiable, but its scope can be reduced through geographic program expansion and tiered eligibility mechanisms.</li>
+
+<li><strong>The IPP opposition is the most substantively credible.</strong> Constellation operates 22 GW of U.S. nuclear capacity and has built substantial recent business around hyperscaler PPAs (Three Mile Island restart for Microsoft, etc.). The federal anchor program threatens this model three ways: by setting a lower price benchmark for nuclear PPAs, by foreclosing IPP access to federal supports for new nuclear, and by channeling hyperscaler nuclear spending into federal-program plants. The IPP case for inclusion is harder to refute on neutral grounds than the IOU case.</li>
+
+<li><strong>The most powerful single mitigation is IOU minority co-ownership.</strong> Permitting Phase 1 IOU partners to take 30–40% minority ownership slices alongside TVA's majority position converts them from conditional opponents to active supporters — they gain a rate-base position in new federal nuclear without bearing construction risk. This dilutes the public-preference principle structurally but preserves it substantively through protections (TVA must be majority owner and sole operator; federal cost-overrun absorption allocated pro rata; IOU shares of overrun absorption capped at invested capital).</li>
+
+<li><strong>Non-adjacent IOU opposition is partly addressed through geographic expansion.</strong> Phase 2 pilots in New York (NYPA), Nebraska (NPPD/OPPD/LES), Los Angeles (LADWP), Arizona (SRP), San Antonio (CPS), and Jacksonville (JEA) significantly expand the IOU base with access to program benefits. Tiered IOU eligibility (limited federal cost-overrun absorption for qualifying IOUs) is held in reserve as a potential expansion if the initial non-adjacent IOU opposition proves to be a major enactment obstacle.</li>
+
+<li><strong>IPP opposition is addressed through operating partnerships and sequencing.</strong> IPPs can participate as operating partners in plants acquired by public utilities (TVA contracts with Constellation/Vistra/Talen for O&amp;M services), giving them access to operating revenue without ownership or federal cost-overrun absorption. Nuclear Construction Reserve Fund eligibility for IPP-built projects is held in reserve as a defined Phase 3 expansion after the initial fleet demonstrates the structure's viability — a sequencing argument that reduces IPP lobbying intensity during the critical initial enactment phase.</li>
+
+<li><strong>State PUC opposition is channeled through optional participation.</strong> Making IOU participation in the program optional at the state level shifts state PUC opposition from being a federal-level lobbying force (where it would oppose program enactment) to being a state-level decision point (where each state independently chooses whether to participate). Texas and other states with active PUC opposition are simply not pursued for IOU participation; the program proceeds with willing participants and accepts the reduced geographic scope.</li>
+
+<li><strong>A counter-coalition is available and meaningful.</strong> Public power trade associations (APPA, NRECA), hyperscaler companies, the nuclear manufacturing supply chain (Westinghouse and subcontractors), national security and AI competitiveness advocates, climate and decarbonization advocates, and Congressional delegations from beneficiary states (TN, AL, MS, KY, VA, NC, GA in Phase 1; NY, NE, CA in Phase 2; PA, OH, SC, NC for manufacturing) all align favorably. The opposition is substantial but not unanimous, and the counter-coalition is real.</li>
+
+<li><strong>The mitigation package is structurally more complex but politically more viable.</strong> Some version of these mitigations is likely necessary for enactment. The base proposal — purely public-utility eligibility with no IOU or IPP accommodation — is structurally cleaner but politically harder. The mitigation package preserves the public-preference principle in its substantive core (federal cost-overrun absorption flows primarily to public utilities and remains the principal generation-side federal support) while accommodating IOU and IPP participation in roles that align their interests with the program's success rather than against it.</li>
+</ul>
+</section>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+
+<nav class="toc" id="contents">
+<h2>Contents</h2>
+<ol>
+  <li><a href="#opposition">Political Opposition: Who Will Fight This and Why</a>
+    <ol>
+      <li><a href="#adjacent-ious">Adjacent IOUs Cast as Offtakers Rather Than Generators</a></li>
+      <li><a href="#non-adjacent-ious">IOUs in Regions Without TVA Adjacency</a></li>
+      <li><a href="#ipps">Independent Power Producers, Especially Nuclear Operators</a></li>
+      <li><a href="#state-pucs">State Public Utility Commissions, Especially in Skeptical States</a></li>
+      <li><a href="#counter-coalition">Building the Counter-Coalition</a></li>
+    </ol>
+  </li>
+  <li><a href="#mitigation">Political Risk Mitigation</a>
+    <ol>
+      <li><a href="#mitigate-adjacent">Mitigating Adjacent IOU Opposition: Minority Ownership Slices</a></li>
+      <li><a href="#mitigate-non-adjacent">Mitigating Non-Adjacent IOU Opposition: Geographic Program Expansion</a></li>
+      <li><a href="#mitigate-ipp">Mitigating IPP Opposition: Operating Partnerships and Fund Eligibility</a></li>
+      <li><a href="#mitigate-puc">Mitigating State PUC Opposition: State-Level Engagement and Optional Participation</a></li>
+      <li><a href="#mitigation-package">The Mitigation Package</a></li>
+    </ol>
+  </li>
+</ol>
+</nav>
+
+<!-- ===== MAIN BODY ===== -->
+
+<h2 id="opposition">Political Opposition: Who Will Fight This and Why <a href="#top" class="anchor-tag">¶</a></h2>
+
+<p>A proposal of this scope and structural ambition will attract substantial organized opposition. Honestly identifying the opposition matters for two reasons: it allows the proposal's drafters to anticipate and address specific objections rather than discovering them mid-legislation, and it helps build the coalition needed to counter them. The principal opposition comes from four distinct groups, each with different motivations, different political reach, and different points of leverage.</p>
+
+<h3 id="adjacent-ious">Adjacent IOUs Cast as Offtakers Rather Than Generators <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The Phase 1 IOU partners — Southern Company, Duke Energy, Dominion Energy, and AEP — gain real benefits under the proposal (transmission rate base, preserved retail relationships, firm clean capacity at federally-financed cost without construction risk), but they also lose something they currently value: the ability to be the dominant generation builder in their service territories. Southern Company's Vogtle 3 &amp; 4 experience, however financially painful, established Southern as the lead operating partner for AP1000 deployment in the Southeast. The federal anchor program effectively transfers that role to TVA, demoting Southern to wholesale buyer and transmission partner. For an IOU that has spent decades building its institutional identity around being the dominant generation builder in its territory, that demotion is structurally threatening regardless of the financial benefits.</p>
+
+<p>Dominion Energy presents the sharpest version of this conflict. Dominion has aggressively pursued its own SMR development and has positioned itself as the lead utility for Northern Virginia data center supply. The anchor program would route a significant share of that supply through TVA-acquired generation rather than Dominion-owned generation, even if Dominion remains the retail-end utility. Dominion's regulatory and political posture in Virginia is built around being the comprehensive solution to its customers' needs; a structure that makes Dominion the retail intermediary for federally-supported, TVA-operated nuclear is harder to defend in Richmond than the current "Dominion builds and serves" narrative.</p>
+
+<p>Duke Energy occupies a middle position. Duke has SMR exploration interests but has not made the same magnitude of capital commitments to in-house nuclear development as Southern or Dominion. Duke may be the most receptive of the three adjacent IOUs to a program that delivers firm clean capacity without requiring Duke to bear construction risk, but Duke will still resist any structural feature that meaningfully shifts its long-term capital deployment trajectory away from its own balance sheet.</p>
+
+<p>The likely posture of these IOUs is conditional opposition: they will support the program if the terms are sufficiently generous on the transmission rate-base, retail margin, and wholesale price dimensions, but they will fight the program at the legislative and regulatory drafting stages to maximize those terms and minimize structural features that make TVA the long-term lead. Their lobbying will focus on issues like: limiting the duration of TVA's wholesale capacity commitments to allow IOU-built alternatives to compete; expanding the IOU's role in plant operation (e.g., as co-licensee or O&amp;M contractor); preserving optionality for the IOU to eventually take ownership of the plant after the federal acquisition price is recovered; and ensuring that hyperscaler contributions to the Construction Reserve Fund don't preferentially flow back to non-IOU offtakers.</p>
+
+<h3 id="non-adjacent-ious">IOUs in Regions Without TVA Adjacency <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The geographically more dangerous opposition comes from IOUs that get nothing under the proposal because they are not adjacent to TVA or another qualifying public utility, and whose competitive position would be eroded by IOUs in adjacent regions getting federally-supported firm clean capacity at favorable cost.</p>
+
+<p>Consider an IOU in the Midwest — say, Ameren or Evergy — that competes for data center siting decisions against IOUs in adjacent regions that get anchor program access. If Southern Company, Duke, and Dominion can offer hyperscalers retail PPAs backed by federally-financed nuclear at acquisition-price wholesale costs, while Ameren can only offer in-house generation built on its own balance sheet (with full construction-cost-overrun exposure passed through to its customers and to its hyperscaler PPAs), Ameren is competitively disadvantaged for data center sitings that could otherwise have gone to its territory. The Nebraska Phase 2 pilot partially addresses this for parts of the Midwest, but it doesn't help IOUs in regions that aren't adjacent to <em>any</em> qualifying public utility.</p>
+
+<p>The same dynamic applies to FirstEnergy in Ohio, NextEra Energy in Florida and the Gulf Coast, Xcel Energy in the upper Midwest, and others. Each of these utilities will view the anchor program as creating an unlevel competitive playing field that favors specific competitor IOUs (those adjacent to qualifying public utilities) at their expense. Their opposition will be unified through the Edison Electric Institute (EEI), the principal trade association representing investor-owned utilities, and will likely focus on demanding either expansion of the program to include IOU acquirers (which would dilute the public-preference principle that makes the program work) or termination of the program entirely.</p>
+
+<p>EEI is a serious political force. Its member utilities collectively employ approximately 670,000 workers, serve essentially all U.S. retail electricity customers outside public power territories, and contribute substantially to political campaigns at federal and state levels. EEI has historically been highly effective at killing federal energy policy proposals that threaten member interests, including most past efforts at federal transmission siting authority and federal generation programs. Opposition from EEI is one of the most predictable features of the political landscape this proposal would face.</p>
+
+<h3 id="ipps">Independent Power Producers, Especially Nuclear Operators <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The third major opposition force is the independent power producer (IPP) industry, with Constellation Energy as the most prominent and most directly threatened example. Constellation operates the largest U.S. nuclear fleet (21 reactors, approximately 22 GW of capacity), and its commercial model depends on selling nuclear-generated power into wholesale markets at prices that recover plant costs plus profit margin. Constellation has built substantial recent business around hyperscaler PPAs — most notably the September 2024 agreement with Microsoft to restart Three Mile Island Unit 1 (rebranded Crane Clean Energy Center), and parallel deals with other hyperscalers for output from existing nuclear plants.</p>
+
+<p>The federal anchor program directly threatens Constellation's commercial model in three ways. First, federally-financed AP1000s at acquisition-price wholesale rates will set a benchmark for nuclear PPA pricing that Constellation's existing fleet must compete against. If federal nuclear is available to hyperscalers at $90-110/MWh through public-utility intermediaries, Constellation faces pressure to price its existing fleet's PPAs comparably — but Constellation has neither the federal cost-overrun absorption nor the federal financing that lets the anchor program deliver at those prices. Second, federally-built new nuclear competes directly with Constellation's potential new-build pipeline; Constellation has publicly discussed building new AP1000s or other large reactors, and the anchor program effectively forecloses Constellation from accessing federal supports that publicly-owned acquirers receive. Third, hyperscaler contributions to the Nuclear Construction Reserve Fund effectively channel hyperscaler nuclear spending toward federal program plants and away from Constellation-built plants, further disadvantaging Constellation's potential new-build commercial case.</p>
+
+<p>Constellation will oppose the program through several channels. It will lobby Congress directly through its substantial federal government relations operation. It will lobby through the Nuclear Energy Institute (NEI), the principal nuclear industry trade association, which represents both Constellation and other commercial nuclear operators (Vistra, Talen, Entergy, NextEra Generation, etc.) — though NEI's posture is complicated because some of its members (TVA, public power operators) would benefit from the program. It will lobby through state-level utility regulators, particularly in states where Constellation has substantial generation operations (Illinois, New York, Pennsylvania, Maryland, Texas). And it will likely fund think-tank policy analyses arguing that the program represents inappropriate federal market intervention.</p>
+
+<p>Vistra, Talen, NextEra Energy Resources, and other IPPs share Constellation's structural concerns even though they have smaller direct nuclear positions. Vistra operates two large coal-to-gas converted units and has growing data center commercial relationships; Talen owns Susquehanna and has signed hyperscaler PPAs; NextEra Energy Resources is the largest U.S. renewable IPP and has growing interests in firm clean generation. Each will likely align with Constellation's opposition to varying degrees.</p>
+
+<p>Crucially, the IPP opposition has more credibility on technical and policy grounds than the EEI opposition because the IPPs are themselves nuclear operators making the case that they should be eligible for federal supports rather than being structurally excluded. The "expand eligibility to IPPs" version of their argument is more difficult to refute on neutral grounds than the "preserve our generation monopoly" version of the IOU argument, even though the structural reasons for preserving public-utility-only eligibility (the public-preference principle, the moral hazard concerns with federal absorption of private profit-seeking risk) apply equally to both.</p>
+
+<h3 id="state-pucs">State Public Utility Commissions, Especially in Skeptical States <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>A fourth source of opposition is state public utility commissions (PUCs) in states where commissioners are skeptical of federal involvement in state-regulated retail markets. State PUC opposition is less unified than the IOU and IPP opposition, because PUCs in adjacent IOU states have different views and incentives — but in specific states, particularly Republican-led states with strong free-market and anti-federal-involvement traditions, PUCs may actively resist IOU participation in the program even if the host IOU wants to participate.</p>
+
+<p>Texas presents the most extreme version: Texas's ERCOT-isolated grid and its strong free-market regulatory tradition mean that any federal anchor program proposal involving Texas IOUs would face active state-level opposition independent of the IOUs' own posture. South Carolina, after the VC Summer experience, has institutional sensitivity to large nuclear projects of any kind. Tennessee itself — despite hosting TVA — has elements of state government that resist federal expansion of any kind, though TVA's deep institutional history in the state moderates this.</p>
+
+<p>PUC opposition operates differently from IOU opposition because PUCs cannot directly block federal legislation, but they can block IOU participation in the program at the state regulatory level by denying the rate-base treatment of IOU transmission segments, denying state-level certificate of public convenience and necessity (CPCN) approvals for the anchor lines, or imposing conditions on IOU participation that make the structure unworkable.</p>
+
+<h3 id="counter-coalition">Building the Counter-Coalition <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The opposition is substantial but not unanimous, and several political forces align favorably with the proposal. Public power trade associations (American Public Power Association, National Rural Electric Cooperative Association) will support the program as a meaningful expansion of public power's role in federal energy policy. Hyperscaler companies will support the program because it solves their clean firm capacity problem at predictable cost — though they will negotiate on specific terms, particularly the Construction Reserve Fund contribution magnitude. The nuclear manufacturing supply chain (Westinghouse and its many subcontractors) will support the program as a major source of new AP1000 orders. National security and AI competitiveness advocates will support the program as a strategic infrastructure response to PRC competition. Climate and decarbonization advocates will support the program for its emissions reduction potential.</p>
+
+<p>Specific states benefit asymmetrically. Tennessee, Alabama, Mississippi, Kentucky, Virginia, North Carolina, and Georgia are direct beneficiaries through the TVA-led Phase 1 pilots. New York and Nebraska benefit through Phase 2 pilots. States with significant nuclear manufacturing supply chains (Pennsylvania, Ohio, South Carolina, North Carolina) benefit through jobs and economic activity. The combined geographic distribution of program benefits should provide a credible base of Congressional support.</p>
+
+<p>The opposition's most effective angle of attack is the "fairness" argument: the program creates competitive asymmetries between public and private utilities and between IOUs in different regions. The strongest counter is the substantive case that the public-preference principle has worked in U.S. federal power policy for nearly a century, has demonstrated long-term durability, and addresses real market failures that purely private mechanisms have not solved. The opposition's strongest substantive angle is the "moral hazard" argument: federal absorption of construction risk reduces the incentive for cost discipline. The strongest counter is that the federal government is the construction principal (not a third-party insurer of a private builder's risk), the hyperscaler Construction Reserve Fund creates a real first-tier risk absorber before federal funds engage, and the public-utility-only eligibility limits the moral hazard scope.</p>
+
+<p>Neither counter is dispositive, and the political fight will be real. But the substantive case is defensible on its merits, the coalition of supporters is meaningful in scale, and the structural alternatives (do nothing and let nuclear cost overruns continue to suppress new build; expand federal supports to IOUs and IPPs and accept the moral hazard problems that follow; or accept that interregional transmission and new nuclear simply won't get built at scale) are each substantially worse than the program this proposal outlines.</p>
+
+<p class="back-to-top"><a href="#contents">↑ contents</a></p>
+
+<h2 id="mitigation">Political Risk Mitigation <a href="#top" class="anchor-tag">¶</a></h2>
+
+<p>The structural concessions described below are designed to convert opposition into qualified support where possible, narrow the opposition's geographic and institutional scope where conversion is not possible, and channel residual opposition into venues where it cannot block federal enactment. Each concession dilutes the proposal's structural purity to some degree; the case for accepting each dilution is the political viability gain it produces.</p>
+
+<h3 id="mitigate-adjacent">Mitigating Adjacent IOU Opposition: Minority Ownership Slices <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The most significant single mitigation — and the one most likely to convert Phase 1 IOU partners from conditional opponents to active supporters — is to permit those IOUs to take minority ownership slices in the plants alongside TVA as the majority acquirer. This co-ownership variant adds some structural complexity to the federal-balance-sheet construction model, but it can be incorporated as a defined option rather than as the architectural default.</p>
+
+<p>Under this mitigation, the federal government builds the plant on the federal balance sheet as in the base proposal. At commercial operation, the plant is transferred jointly to TVA and one or more IOU minority co-owners at the agreed acquisition price, with TVA holding 60-70% of the plant and IOU partner(s) holding 30-40% collectively. TVA remains the operator and the lead acquirer; the IOU's minority position is purely economic, providing rate-base ownership in generation without operational responsibility. The IOU's share of the acquisition price is financed through normal IOU capital structure with state-regulated rate base recovery; TVA's share is financed through its expanded debt authority as in the base proposal.</p>
+
+<p>This mitigation gives Southern Company, Duke, and Dominion something substantial they currently lack: a rate-base position in the new federal nuclear fleet. Vogtle 3 &amp; 4 cost Southern Company roughly 2.5x the original estimate, but Southern still earned regulated return on its share of the rate-based capital throughout the project's life and continues to do so. A 30% co-ownership position in a federally-built AP1000 acquired at the original-estimate acquisition price gives Southern an equivalent rate-base position at substantially lower risk and cost than Vogtle, because the IOU's exposure is bounded at the acquisition-price share — federal cost-overrun absorption protects the IOU as well as TVA. Dominion gets a meaningful nuclear rate-base position without having to navigate Virginia regulatory approval for in-state construction. Duke gets a defined entry into nuclear ownership without bearing first-of-a-kind execution risk.</p>
+
+<p>The complications are real and worth naming. First, the federal-balance-sheet construction model and the cost-overrun absorption mechanism are structurally simpler with a single acquirer. Multiple acquirers require defining how federal tail-risk absorption is allocated, how the Nuclear Construction Reserve Fund disburses to multiple parties, and how state PUC prudency reviews handle a federally-set acquisition price for IOU co-owners. Second, the public-preference principle is partially diluted: IOU rate-base position in generation means that some share of operating economics flows to IOU shareholders rather than to public-utility ratepayers, which is exactly what the public-preference principle was designed to limit. Third, the legislative drafting is more complex because the program must specify how mixed-acquirer projects are handled differently from single-acquirer projects.</p>
+
+<p>The case for accepting these complications is the political acceptance they buy. The Edison Electric Institute's opposition to the program is qualitatively different if Southern, Duke, and Dominion are publicly aligned in support because they receive rate-base benefits from participating, versus if those IOUs are aligned with EEI in opposition because they receive only offtake benefits. The minority co-ownership option moves the affected IOUs from the latter posture to the former, which is a major political shift even if it dilutes the structural purity of the proposal.</p>
+
+<p>The structural protections that preserve the public-preference principle even with IOU minority co-ownership are: TVA must be the majority owner and sole operator; the federal cost-overrun absorption flows to the federal balance sheet first and is then allocated to acquirers pro rata to their ownership shares, with IOU shares of overrun absorption capped at the IOU's invested capital; the Nuclear Construction Reserve Fund's disbursements are calibrated so that IOU acquirers receive proportionally less benefit per dollar of hyperscaler contribution than public-utility acquirers (reflecting the public-preference principle at the level of risk-absorption allocation rather than at the level of acquirer eligibility); and IOU co-ownership is contingent on the IOU's host PUC approving terms that protect retail ratepayers from cross-subsidizing hyperscaler load. With these protections, the public-preference principle is preserved in modified form: public utilities still receive preferential treatment in federal supports, but IOUs gain access to a secondary tier of benefits sufficient to align their participation.</p>
+
+<h3 id="mitigate-non-adjacent">Mitigating Non-Adjacent IOU Opposition: Geographic Program Expansion <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The opposition from IOUs in regions without TVA adjacency (Ameren, Evergy, FirstEnergy, NextEra Florida, Xcel, others) is harder to address because the geographic limit of the program is intrinsic to its design — anchor lines have to connect to specific generation in specific places, and not every IOU territory has a qualifying public utility nearby. However, several mitigations narrow the geographic exclusion.</p>
+
+<p>The Phase 2 expansion to NYPA, the Nebraska public power group, LADWP, SRP, CPS Energy, and JEA covers substantial additional U.S. geography beyond TVA. With those Phase 2 pilots operational, anchor lines can reach data center load in New York, the upper Midwest (Omaha, Kansas City, Minneapolis), Phoenix, San Antonio, Jacksonville, and Los Angeles in addition to the original Southeast footprint. This significantly expands the IOU base that has access to program benefits, leaving genuinely excluded IOUs as a smaller and more geographically specific group rather than a majority.</p>
+
+<p>A second mitigation is to permit qualifying IOUs (those meeting defined criteria around scale, nuclear operating capability, and willingness to participate) to acquire federally-built plants as the program scales beyond its initial public-utility-only phase, but with reduced federal cost-overrun absorption relative to public-utility acquirers. Under this tiered eligibility, public utilities retain full federal cost-overrun absorption above the hyperscaler band; IOUs gain access to a more limited federal absorption mechanism (perhaps covering 50% of overruns above the hyperscaler band rather than 100%, with the remainder absorbed by the IOU acquirer through state-regulated rate base recovery). This preserves the public-preference principle as a substantive favoring of public utilities while removing the absolute exclusion of IOUs from acquirer eligibility. The tiered approach is structurally cleaner than full IOU access but adds complexity to the cost-overrun absorption mechanism.</p>
+
+<p>A third mitigation is to expand the "transmission anchored to federally-supported generation" eligibility beyond plants in the federal anchor program. IOU-built or IPP-built clean firm generation that receives federal financing support (LPO loans, IRA tax credits, etc.) could qualify as anchor generation for federal transmission siting authority and federal credit facility access — even though it would not qualify for federal cost-overrun absorption. This gives non-adjacent IOUs and IPPs access to the program's transmission benefits without diluting the generation-side public-preference principle. The federal cost-overrun absorption stays public-utility-only; the federal transmission support broadens to include qualifying clean firm generation regardless of ownership.</p>
+
+<p>These mitigations collectively reduce the non-adjacent IOU opposition but do not eliminate it. EEI will still oppose any program that gives public-utility acquirers competitive advantages, regardless of whether those advantages are partial or comprehensive. The political question is whether the mitigations reduce opposition enough to enable enactment, not whether they eliminate opposition entirely.</p>
+
+<h3 id="mitigate-ipp">Mitigating IPP Opposition: Operating Partnerships and Fund Eligibility <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The IPP opposition, especially from Constellation, is the most substantively credible because IPPs are themselves nuclear operators making the case for inclusion rather than just defending generation monopolies. Mitigations here require more careful structural concessions.</p>
+
+<p>The most direct mitigation is to enable IPPs to participate as operating partners in plants acquired by public utilities. Under this structure, TVA, NYPA, or another public-utility acquirer can contract with Constellation, Vistra, Talen, or another IPP for plant operating services. The IPP provides operational workforce, refueling outage management, and other operating functions; the public utility retains ownership, rate-base position, and federal cost-overrun absorption benefits. This gives IPPs access to the operating revenue stream from federally-built plants without giving them ownership or federal cost-overrun absorption. The economic position is roughly equivalent to a long-term O&amp;M contract — substantial revenue, but no equity participation in the underlying asset.</p>
+
+<p>Constellation in particular has substantial value to add as an operating partner. Constellation operates more nuclear capacity than any other U.S. company and has the deepest commercial nuclear operations expertise. A TVA-acquired AP1000 at Bellefonte could plausibly be operated under contract by Constellation as a way of accelerating TVA's expansion into AP1000-specific operations and accessing Constellation's supply chain relationships. The structural protection that preserves the public-preference principle is that operational decisions remain subject to public-utility approval, plant ownership remains with the public utility, and the federal cost-overrun absorption flows only to the public-utility acquirer.</p>
+
+<p>A second mitigation is to extend Nuclear Construction Reserve Fund coverage to IPP-built new nuclear projects under defined terms. An IPP that builds new nuclear capacity (a hypothetical Constellation-built AP1000, for example) could pay into the Fund through its hyperscaler offtake revenues and receive Fund disbursements for cost overruns within a defined band, with the IPP providing first-loss capital below the Fund's coverage band. This makes IPP-built nuclear partially financeable through the federal risk-pooling mechanism without giving IPPs access to direct federal cost-overrun absorption. The structural argument is that the Fund is a risk-pooling instrument funded by hyperscaler contributions, not a direct federal subsidy, so extending Fund eligibility to IPP projects doesn't violate the same public-preference principle that limits eligibility for direct federal cost-overrun absorption. The trade-off is increased complexity in Fund administration and potential dilution of the public-utility-favored character of the program.</p>
+
+<p>A third mitigation is sequencing. The IPP opposition is most effective if mobilized early in the legislative process. If the program is initiated with public-utility-only eligibility and IPP access is added in a defined Phase 3 expansion after the initial fleet demonstrates the structure's viability, the IPP opposition during the initial enactment is partially defused by the prospect of future access. This is a sequencing argument rather than a structural concession, but it can meaningfully reduce IPP lobbying intensity during the critical initial enactment phase.</p>
+
+<h3 id="mitigate-puc">Mitigating State PUC Opposition: State-Level Engagement and Optional Participation <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>The state PUC opposition is partially addressed by making IOU participation in the program optional at the state level. The Federal Anchor Generation Authority does not compel any IOU to participate as a transmission partner, wholesale buyer, or retail offtake intermediary. A state PUC that opposes IOU participation can simply not approve the IOU's request to participate, and the program continues without that IOU. The political effect is that state PUC opposition shifts from being a federal-level lobbying force (where it would oppose the program's enactment) to being a state-level decision point (where each state independently chooses whether to participate).</p>
+
+<p>This mitigation works for states like Texas, where IOU participation would face active PUC opposition. The Texas pilot is simply not pursued; the program proceeds with participation from states where the PUC and IOU are aligned in favor. The program's geographic scope is reduced, but its political viability is enhanced because state-level opposition cannot block federal enactment.</p>
+
+<p>A complementary mitigation is targeted state-level engagement during the federal legislative process. State PUCs with concerns about the program can be engaged through formal consultation requirements in the Federal Anchor Generation Authority, providing them with structured opportunities to shape the program's terms in ways that reduce their concerns. NARUC (the National Association of Regulatory Utility Commissioners) can be engaged as a federal-level interlocutor for state PUC concerns. These engagements don't eliminate state PUC opposition but channel it constructively rather than allowing it to manifest only as opposition to enactment.</p>
+
+<h3 id="mitigation-package">The Mitigation Package <a href="#top" class="anchor-tag">¶</a></h3>
+
+<p>A practical implementation of these mitigations produces the following package:</p>
+
+<p>The IOU minority co-ownership option is offered as a structural feature of the program from initial enactment, with the structural protections described above preserving the public-preference principle in modified form. This is the largest single mitigation and the one most likely to convert Phase 1 IOU partners from opponents to supporters. It complicates the proposal's structure but is worth the political cost.</p>
+
+<p>The Phase 2 geographic expansion to NYPA, Nebraska, LADWP, SRP, CPS Energy, and JEA is pursued in parallel with Phase 1, reducing the non-adjacent IOU exclusion. The tiered IOU eligibility (limited federal cost-overrun absorption for IOUs that meet defined criteria) is held in reserve as a potential expansion if the initial non-adjacent IOU opposition proves to be a major obstacle to enactment. The transmission-eligibility expansion (federal transmission support for clean firm generation regardless of acquirer ownership, while cost-overrun absorption stays public-utility-only) is included from initial enactment because it expands the IOU and IPP base of supporters without diluting the core public-preference principle.</p>
+
+<p>The IPP operating partnership option is offered as a structural feature from initial enactment, giving Constellation and other IPPs access to operating revenue from federally-built plants. The Nuclear Construction Reserve Fund eligibility expansion to IPP-built projects is held in reserve as a Phase 3 option after initial fleet demonstrates structure viability. The sequencing argument is communicated to IPP stakeholders during the legislative process to reduce their opposition intensity.</p>
+
+<p>State PUC engagement is structured through formal consultation requirements in the Federal Anchor Generation Authority and through NARUC interlocution. Texas and other states with active PUC opposition are simply not pursued for IOU participation; the program proceeds with willing participants and accepts the reduced geographic scope.</p>
+
+<p>The cumulative effect of this mitigation package is a program that is structurally more complex than the base proposal but politically more viable. The public-preference principle is preserved in its substantive core (federal cost-overrun absorption flows only to public utilities and remains the principal federal generation-side support) while accommodating IOU and IPP participation in roles that align their interests with the program's success rather than against it. The political fight will still be real, but the coalition of supporters is larger and the opposition is narrower than the base proposal would produce.</p>
+
+<p>The honest assessment is that some version of this mitigation package is likely necessary for enactment. The base proposal — purely public-utility eligibility with no IOU or IPP accommodation — is structurally cleaner but politically harder. The mitigation package described here represents a reasonable compromise between structural integrity and political achievability.</p>
+
+<p class="back-to-top"><a href="#contents">↑ contents</a></p>
+
+</body>
+</html>
