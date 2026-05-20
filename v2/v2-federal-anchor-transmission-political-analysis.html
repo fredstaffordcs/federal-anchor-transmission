@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Federal Anchor Transmission: Political Opposition and Risk Mitigation</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+:root {
+--text-color: #1a1a1a;
+--text-secondary: #4a4a4a;
+--accent: #2E5C8A;
+--accent-light: #4a7ab0;
+--bg: #fdfdfb;
+--bg-secondary: #f5f4f0;
+--border: #d8d4cc;
+--code-bg: #f0eee8;
+--table-header: #e8e5dd;
+}
+* { box-sizing: border-box; }
+body {
+font-family: Georgia, 'Times New Roman', serif;
+font-size: 17px;
+line-height: 1.65;
+color: var(--text-color);
+background: var(--bg);
+margin: 0;
+padding: 0;
+max-width: 780px;
+margin: 0 auto;
+padding: 60px 40px 100px 40px;
+}
+@media (max-width: 768px) {
+body { padding: 30px 20px 60px 20px; font-size: 16px; }
+}
+.container {
+
+}
+h1 {
+font-size: 2em;
+font-weight: 600;
+margin: 0 0 0.3em 0;
+line-height: 1.25;
+color: var(--text-color);
+letter-spacing: -0.01em;
+}
+h2 {
+font-size: 1.5em;
+font-weight: 600;
+margin: 2.5em 0 0.7em 0;
+padding-bottom: 0.3em;
+border-bottom: 2px solid var(--border);
+color: var(--accent);
+scroll-margin-top: 20px;
+}
+h3 {
+font-size: 1.2em;
+font-weight: 600;
+margin: 1.8em 0 0.6em 0;
+color: var(--text-color);
+scroll-margin-top: 20px;
+}
+h4 {
+font-size: 1.05em;
+font-weight: 600;
+margin: 1.4em 0 0.4em 0;
+color: var(--text-secondary);
+}
+p {
+margin: 0 0 1.1em 0;
+text-align: justify;
+hyphens: auto;
+}
+a {
+color: var(--accent);
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: border-color 0.15s;
+}
+a:hover {
+border-bottom-color: var(--accent);
+}
+em { font-style: italic; }
+strong { font-weight: 600; color: var(--text-color); }
+ul, ol {
+margin: 0 0 1.2em 0;
+padding-left: 1.6em;
+}
+li { margin-bottom: 0.4em; }
+blockquote {
+margin: 1.5em 0;
+padding: 0.8em 1.2em;
+border-left: 3px solid var(--accent-light);
+background: var(--bg-secondary);
+font-style: italic;
+color: var(--text-secondary);
+}
+code {
+font-family: 'SF Mono', Menlo, Consolas, monospace;
+font-size: 0.9em;
+background: var(--code-bg);
+padding: 0.1em 0.35em;
+border-radius: 3px;
+}
+pre {
+background: var(--code-bg);
+padding: 1em;
+border-radius: 4px;
+overflow-x: auto;
+font-size: 0.9em;
+}
+pre code {
+background: none;
+padding: 0;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5em 0;
+font-size: 0.95em;
+}
+th, td {
+padding: 0.6em 0.8em;
+text-align: left;
+border-bottom: 1px solid var(--border);
+vertical-align: top;
+}
+th {
+background: var(--table-header);
+font-weight: 600;
+border-bottom: 2px solid var(--accent-light);
+}
+tbody tr:hover {
+background: var(--bg-secondary);
+}
+img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 1.5em auto;
+border: 1px solid var(--border);
+border-radius: 4px;
+}
+figure {
+margin: 2em 0;
+text-align: center;
+}
+figcaption {
+font-size: 0.9em;
+color: var(--text-secondary);
+font-style: italic;
+margin-top: 0.6em;
+}
+hr {
+border: none;
+border-top: 1px solid var(--border);
+margin: 3em 0;
+}
+
+header#title-block-header {
+margin-bottom: 2.5em;
+padding-bottom: 1.5em;
+border-bottom: 3px double var(--border);
+}
+header#title-block-header h1.title {
+font-size: 2em;
+margin: 0 0 0.3em 0;
+border: none;
+padding: 0;
+}
+header#title-block-header p.author,
+header#title-block-header p.date {
+color: var(--text-secondary);
+font-style: italic;
+font-size: 0.95em;
+margin: 0.2em 0;
+}
+nav#TOC {
+background: var(--bg-secondary);
+border-left: 4px solid var(--accent);
+padding: 1.5em 2em;
+margin: 2em 0 3em 0;
+border-radius: 0 4px 4px 0;
+}
+nav#TOC::before {
+content: "Contents";
+display: block;
+font-size: 1.1em;
+font-weight: 600;
+margin-bottom: 0.8em;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: var(--text-color);
+}
+nav#TOC ul {
+list-style: none;
+padding-left: 0;
+margin: 0;
+}
+nav#TOC ul ul {
+padding-left: 1.5em;
+margin-top: 0.3em;
+margin-bottom: 0.3em;
+}
+nav#TOC li {
+margin-bottom: 0.35em;
+font-size: 0.95em;
+}
+nav#TOC a {
+color: var(--text-color);
+border-bottom: none;
+}
+nav#TOC a:hover {
+color: var(--accent);
+}
+
+.title-block {
+margin-bottom: 3em;
+padding-bottom: 2em;
+border-bottom: 3px double var(--border);
+}
+.author-line {
+color: var(--text-secondary);
+font-style: italic;
+font-size: 0.95em;
+margin-top: 0.5em;
+}
+
+.toc {
+background: var(--bg-secondary);
+border-left: 4px solid var(--accent);
+padding: 1.5em 2em;
+margin: 2em 0 3em 0;
+border-radius: 0 4px 4px 0;
+}
+.toc h2 {
+font-size: 1.1em;
+margin: 0 0 0.8em 0;
+padding: 0;
+border: none;
+color: var(--text-color);
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+.toc ul {
+list-style: none;
+padding-left: 0;
+margin: 0;
+}
+.toc ul ul {
+padding-left: 1.5em;
+margin-top: 0.3em;
+}
+.toc li {
+margin-bottom: 0.35em;
+font-size: 0.95em;
+}
+.toc a {
+color: var(--text-color);
+border-bottom: none;
+}
+.toc a:hover {
+color: var(--accent);
+}
+
+@media print {
+body { font-size: 11pt; background: white; }
+.container { padding: 0; max-width: none; }
+h2 { page-break-before: auto; page-break-after: avoid; }
+h3 { page-break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+img { page-break-inside: avoid; }
+.toc { page-break-after: always; }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Federal Anchor Transmission: Political Opposition and
+Risk Mitigation</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#federal-anchor-transmission-political-opposition-and-risk-mitigation" id="toc-federal-anchor-transmission-political-opposition-and-risk-mitigation">Federal
+Anchor Transmission: Political Opposition and Risk Mitigation</a>
+<ul>
+<li><a href="#political-opposition-who-will-fight-this-and-why" id="toc-political-opposition-who-will-fight-this-and-why">Political
+Opposition: Who Will Fight This and Why</a></li>
+<li><a href="#political-risk-mitigation" id="toc-political-risk-mitigation">Political Risk Mitigation</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="federal-anchor-transmission-political-opposition-and-risk-mitigation">Federal
+Anchor Transmission: Political Opposition and Risk Mitigation</h1>
+<p><em>Companion document to “Federal Anchor Transmission: A Proposal
+for Interregional Buildout Through Federally-Built Clean Firm
+Generation.”</em></p>
+<p><em>Fred Stafford · <a href="mailto:fred@publicpowerreview.org">fred@publicpowerreview.org</a></em>
+<em>Version 2.0 · May 20, 2026</em></p>
+<p>This companion document develops the political opposition analysis
+and mitigation strategies that accompany the main proposal. The main
+document presents the structural architecture of the Federal Anchor
+Transmission Program; this document analyzes the organized political
+opposition the proposal would face and outlines specific structural
+concessions that could reduce that opposition.</p>
+<p>Version 2.0 adds substantial new analysis on two opposition vectors
+that Version 1.0 didn’t adequately address. First, the interregional
+transmission advocate community (Grid Strategies, ACEG, Brattle, ESIG,
+Niskanen, RMI, and others) has specific positions on how uncommitted
+interregional capacity should be compensated, and the federal anchor
+program’s reliability vintage design conflicts with the advocate
+community’s consensus position. Second, the reliability vintage’s
+existence creates a sophisticated commercialization-as-wedge critique
+that opponents could mount to push the program toward market integration
+over time. Both vectors require explicit treatment in the proposal’s
+political strategy.</p>
+<h2 id="political-opposition-who-will-fight-this-and-why">Political
+Opposition: Who Will Fight This and Why</h2>
+<p>A proposal of this scope and structural ambition will attract
+substantial organized opposition. Honestly identifying the opposition
+matters for two reasons: it allows the proposal’s drafters to anticipate
+and address specific objections rather than discovering them
+mid-legislation, and it helps build the coalition needed to counter
+them. The principal opposition comes from five distinct groups, each
+with different motivations, different political reach, and different
+points of leverage.</p>
+<h3 id="adjacent-ious-that-are-cast-as-offtakers-rather-than-generators">Adjacent
+IOUs That Are Cast as Offtakers Rather Than Generators</h3>
+<p>The Phase 1 IOU partners — Southern Company, Duke Energy, Dominion
+Energy, and Entergy Mississippi — gain real benefits under the proposal
+(transmission rate base, preserved retail relationships, firm clean
+capacity at federally-financed cost without construction risk), but they
+also lose something they currently value: the ability to be the dominant
+generation builder in their service territories. Southern Company’s
+Vogtle 3 &amp; 4 experience, however financially painful, established
+Southern as the lead operating partner for AP1000 deployment in the
+Southeast. The federal anchor program effectively transfers that role to
+TVA, demoting Southern to wholesale buyer and transmission partner. For
+an IOU that has spent decades building its institutional identity around
+being the dominant generation builder in its territory, that demotion is
+structurally threatening regardless of the financial benefits.</p>
+<p>Dominion Energy presents the sharpest version of this conflict.
+Dominion has aggressively pursued its own SMR development and has
+positioned itself as the lead utility for Northern Virginia data center
+supply. The anchor program would route a significant share of that
+supply through TVA-acquired generation rather than Dominion-owned
+generation. Dominion’s regulatory and political posture in Virginia is
+built around being the comprehensive solution to its customers’ needs; a
+structure that makes Dominion the retail intermediary for
+federally-supported, TVA-operated nuclear is harder to defend in
+Richmond than the current “Dominion builds and serves” narrative.</p>
+<p>Duke Energy occupies a middle position. Duke has SMR exploration
+interests but has not made the same magnitude of capital commitments to
+in-house nuclear development as Southern or Dominion. Duke may be the
+most receptive of the adjacent IOUs to a program that delivers firm
+clean capacity without requiring Duke to bear construction risk, but
+Duke will still resist any structural feature that meaningfully shifts
+its long-term capital deployment trajectory away from its own balance
+sheet.</p>
+<p>The likely posture of these IOUs is conditional opposition: they will
+support the program if the terms are sufficiently generous on the
+transmission rate-base, retail margin, and wholesale price dimensions,
+but they will fight the program at the legislative and regulatory
+drafting stages to maximize those terms and minimize structural features
+that make TVA the long-term lead. Their lobbying will focus on issues
+like: limiting the duration of TVA’s wholesale capacity commitments;
+expanding the IOU’s role in plant operation; preserving optionality for
+the IOU to eventually take ownership of the plant after the federal
+acquisition price is recovered; and ensuring that hyperscaler
+contributions to the Reserve Fund don’t preferentially flow back to
+non-IOU offtakers.</p>
+<h3 id="ious-in-regions-without-tva-adjacency">IOUs in Regions Without
+TVA Adjacency</h3>
+<p>The geographically more dangerous opposition comes from IOUs that get
+nothing under the proposal because they are not adjacent to TVA or
+another qualifying public utility, and whose competitive position would
+be eroded by IOUs in adjacent regions getting federally-supported firm
+clean capacity at favorable cost. Consider an IOU in the Midwest — say,
+Ameren or Evergy — that competes for data center siting decisions
+against IOUs in adjacent regions that get anchor program access. If
+Southern Company, Duke, Dominion, and Entergy Mississippi can offer
+hyperscalers retail PPAs backed by federally-financed nuclear at
+acquisition-price wholesale costs, while Ameren can only offer in-house
+generation built on its own balance sheet, Ameren is competitively
+disadvantaged.</p>
+<p>The same dynamic applies to FirstEnergy in Ohio, NextEra Energy in
+Florida and the Gulf Coast, Xcel Energy in the upper Midwest, and
+others. Their opposition will be unified through the Edison Electric
+Institute (EEI), the principal trade association representing
+investor-owned utilities. EEI is a serious political force whose member
+utilities collectively serve essentially all U.S. retail electricity
+customers outside public power territories, contribute substantially to
+political campaigns, and has historically been highly effective at
+killing federal energy policy proposals that threaten member
+interests.</p>
+<h3 id="independent-power-producers-especially-nuclear-operators">Independent
+Power Producers, Especially Nuclear Operators</h3>
+<p>The third major opposition force is the independent power producer
+(IPP) industry, with Constellation Energy as the most prominent and most
+directly threatened example. Constellation operates the largest U.S.
+nuclear fleet (21 reactors, ~22 GW) and has built substantial recent
+business around hyperscaler PPAs (the Three Mile Island Unit 1 restart
+for Microsoft, parallel deals with other hyperscalers).</p>
+<p>The federal anchor program directly threatens Constellation’s
+commercial model. Federally-financed AP1000s at acquisition-price
+wholesale rates will set a benchmark for nuclear PPA pricing that
+Constellation’s existing fleet must compete against. Federally-built new
+nuclear competes directly with Constellation’s potential new-build
+pipeline. Hyperscaler contributions to the Reserve Fund effectively
+channel hyperscaler nuclear spending toward federal program plants and
+away from Constellation-built plants.</p>
+<p>Constellation will oppose the program through direct Congressional
+lobbying, through the Nuclear Energy Institute (NEI), and through
+state-level utility regulators where Constellation has substantial
+operations. Vistra, Talen, NextEra Energy Resources, and other IPPs
+share Constellation’s structural concerns to varying degrees. The IPP
+opposition has more credibility on technical and policy grounds than the
+EEI opposition because the IPPs are themselves nuclear operators making
+the case that they should be eligible for federal supports — but the
+“expand eligibility to IPPs” argument fundamentally contradicts the
+public-preference principle the program is built on.</p>
+<h3 id="state-public-utility-commissions-especially-in-skeptical-states">State
+Public Utility Commissions, Especially in Skeptical States</h3>
+<p>A fourth source of opposition is state public utility commissions
+(PUCs) in states where commissioners are skeptical of federal
+involvement in state-regulated retail markets. Texas’s ERCOT-isolated
+grid and strong free-market regulatory tradition mean any federal anchor
+program proposal involving Texas IOUs would face active state-level
+opposition independent of the IOUs’ own posture. South Carolina, after
+the VC Summer experience, has institutional sensitivity to large nuclear
+projects. Tennessee itself — despite hosting TVA — has elements of state
+government that resist federal expansion of any kind.</p>
+<p>PUC opposition operates differently from IOU opposition because PUCs
+cannot directly block federal legislation, but they can block IOU
+participation in the program at the state regulatory level by denying
+rate-base treatment, denying CPCN approvals for anchor lines, or
+imposing unworkable conditions on IOU participation.</p>
+<h3 id="interregional-transmission-advocates-and-the-commercialization-tension">Interregional
+Transmission Advocates and the Commercialization Tension</h3>
+<p>Version 2.0 identifies a fifth opposition vector that Version 1.0
+didn’t address: the interregional transmission advocate community, whose
+consensus position on uncommitted interregional capacity conflicts with
+the federal anchor program’s reliability vintage design choice.</p>
+<p>The advocate community — Grid Strategies (Rob Gramlich and
+colleagues), ACEG (Christina Hayes and the Americans for a Clean Energy
+Grid coalition), Brattle Group (Johannes Pfeifenberger), ESIG (Energy
+Systems Integration Group), Niskanen Center (Robin Allen, Rachel
+Levine), RMI, R Street, and elements of EEI — has spent years building
+rhetorical and analytical infrastructure around the proposition that
+interregional transmission is undervalued by U.S. market structures. The
+unifying frame is that interregional capacity should be
+<em>compensated</em> for the reliability value it provides, with
+<strong>intertie optimization</strong> (real-time energy market
+participation) and <strong>ELCC-based capacity accreditation</strong> as
+the two preferred mechanisms.</p>
+<p>Pfeifenberger’s April 2025 “Intertie Optimization” presentation put
+this most directly: “This resource adequacy and resilience value of even
+‘uncommitted’ interregional transmission is recognized only by some
+RTOs/ISOs (e.g., NYISO and ISO-NE). Other RTOs (such as PJM) attribute
+very little resource adequacy value to existing interregional
+transmission and zero value to new interregional transmission. None of
+the RTOs compensate the resource adequacy and resilience value of
+uncommitted interregional transmission provided on a merchant basis.”
+Pfeifenberger’s prescription is commercialization through intertie
+optimization plus RA accreditation, not deliberate reservation.</p>
+<p>The Brooks/Silverstein/Gramlich June 2025 Grid Strategies report
+“Resource Adequacy Value of Interregional Transmission” (co-published
+with ACEG and Grid United) is the most directly relevant document. It
+argues that interregional lines should receive RA value through
+“reducing the LSE’s capacity obligation or accrediting and compensating
+the transmission line owner,” with RA value possible “even without firm
+generation associated with the facility.” The ELCC tables in the report
+— for the North Plains Connector project, per the Astrapé Consulting
+evaluation reviewed by PNNL — show 3,550 MW of capacity value on a 3,000
+MW nameplate (118.3%). These tables presume that non-firm
+scarcity-period flows generate RA value. The report does not
+affirmatively endorse leaving the reliability vintage uncompensated, but
+its analytical framework is compatible with that outcome provided the
+capacity is ELCC-accredited and compensated.</p>
+<p>The Niskanen Center brief by Robin Allen and Rachel Levine
+(“Unlocking HVDC: How Congress can enable a more resilient grid”)
+explicitly calls for “compensating HVDC operators for services that
+improve the reliability of the overall grid” — the clearest advocacy
+statement that reliability headroom should receive compensation. But
+Niskanen frames this as a deficiency in current market structures (a
+problem to fix), not as an endorsement of leaving capacity
+uncompensated.</p>
+<p>The dominant critique throughout the advocate literature is
+<strong>economic underutilization</strong> — capacity unused when there
+is a positive price differential — not low average physical utilization.
+The 2026 LBNL paper by Safavi et al. quantifies the inefficiency: “26%
+of all net flow on the interfaces we study between 2014 and 2023
+displaces relatively cheaper within-region generation with more
+expensive generation and… most interfaces are regularly underutilized,
+even when the energy being exchanged is economical.” The Brattle/Willkie
+Farr report estimates “$50–60 million annually in additional value for
+every gigawatt of intertie capacity beyond what bilateral trades are
+currently able to capture.” This frame strongly favors some mechanism
+for the reliability vintage to flow opportunistically when prices
+justify it.</p>
+<p>The advocate community’s posture toward the federal anchor program
+will therefore be conditional. The program’s reliability vintage
+architecture is roughly the kind of infrastructure they advocate for
+(interregional capacity sized for resource adequacy benefits during
+stress events), but the program’s design choice to wall the reliability
+vintage off from commercial dispatch markets directly contradicts their
+preferred mechanism (compensation through ELCC accreditation plus
+market-eligible dispatch). Whether the advocate community supports or
+opposes the program depends substantially on how the proposal is framed
+and how the reliability vintage’s market posture is described.</p>
+<p><strong>The Pacific Intertie analogy is rhetorically
+two-edged.</strong> RMI invokes the Pacific Intertie as a success story
+for interregional transmission — President Kennedy’s 1961 directive
+leading to a vital link between California and the Pacific Northwest.
+The Northwest Power and Conservation Council notes that “most of the
+power transmitted on the Intertie is surplus to regional needs, but some
+firm power also is transmitted.” But E3 and NARUC critique that same
+partly-non-firm structure as Pacific Intertie–era underutilization:
+“Recent historical data for the operation of existing interregional
+transmission lines indicate that interregional interties are often
+underutilized even when flows are most valuable.” The contemporary push
+for Western EIM, intertie optimization, and SEEM is largely framed as
+<em>correcting</em> the Pacific Intertie–era inefficiency. The federal
+anchor program needs to anticipate which framing advocates adopt and be
+prepared for the opposing rhetorical move.</p>
+<p><strong>DOE’s Transmission Facilitation Program is rhetorical
+infrastructure that doesn’t support the federal anchor program’s
+reliability vintage design.</strong> DOE’s TFP capacity-contract awards
+(SWIP-N, Aroostook, Cimarron Link, Southline, Southern Spirit) are
+designed as temporary commercial gap-fillers that DOE intends to resell,
+not as standing federal reliability reserves. Rob Gramlich praised this
+design feature in POWER Magazine: “that sequence — allowing for the
+DOE’s capacity reservation before transmission construction, and then
+allowing the line’s subscribers to pay back the government — is a
+notable step forward.” A federal anchor proposal contemplating permanent
+uncommercialized federal reliability vintage is a structural departure
+from how the existing TFP works, and advocates have not built rhetorical
+scaffolding for it.</p>
+<p><strong>No major advocate currently endorses deliberately
+uncommercialized HVDC reliability headroom.</strong> A targeted review
+of Princeton ZERO Lab (Jenkins/Ricks), MIT CEEPR, LBNL EMP, and the
+broader advocate literature found no paper that models deliberate
+reservation of HVDC capacity outside wholesale markets as an optimal
+design choice. There is a genuine literature gap. The federal anchor
+proposal is operating in a conceptual space the advocacy community has
+not yet built rhetorical infrastructure around — both an opportunity (to
+define the framing) and a vulnerability (proponents must do the
+conceptual work that doesn’t exist elsewhere).</p>
+<h3 id="commercialization-as-wedge-the-sophisticated-critique">Commercialization-as-Wedge:
+The Sophisticated Critique</h3>
+<p>The reliability vintage’s existence creates a structural
+vulnerability that opponents could exploit through a sophisticated
+critique distinct from the broad commercialization preference. The
+argument’s surface form sounds reasonable: 300-500 MW per line of
+physical capacity sitting unused most of the time invites the suggestion
+that it should be commercialized through an energy imbalance market —
+SEEM expansion to include TVA, or bilateral EIM-style arrangements
+between TVA and PJM/Duke/MISO South across the new physical
+interconnections. The “wasted infrastructure” framing is politically
+resonant in cost-conscious environments where any unused asset looks
+like ratepayer money sitting idle.</p>
+<p>But this is a Trojan horse for market integration. The mechanism
+doesn’t stop at one-time monetization of unused capacity. EIM
+participation creates regular operational data flows, real-time price
+signals influencing dispatch, and ongoing operational integration. Over
+time the boundary between TVA and the destination RTOs becomes more
+permeable even if TVA’s formal legal independence remains intact. Once
+TVA is running real-time settlement against PJM or MISO price signals,
+it’s effectively participating in those markets without formal
+membership, and formal RTO membership argued as a natural extension of
+integration that’s already happening becomes considerably easier to
+make.</p>
+<p>The historical analog is BPA’s ongoing pressure to integrate into
+CAISO’s Western EIM. BPA has held the line on full integration but only
+through strong institutional commitment, not through any structural
+feature that prevents pressure from accumulating. The federal anchor
+program is potentially more exposed than TVA’s existing seams because it
+creates new physical interconnections where commercialization arguments
+can be made fresh, without the historical baggage of TVA’s longstanding
+non-RTO structure. The reliability vintage’s specific framing as “extra
+capacity beyond contracted commercial use” practically begs the question
+of why it isn’t commercialized.</p>
+<p>Who would make this argument? Several constituencies have alignment
+with the commercialization framing. The interregional transmission
+advocate community (described above) prefers commercialized capacity on
+substantive grounds — they’re not pursuing a market integration agenda
+per se, but their preferred mechanisms (intertie optimization, ELCC
+accreditation, EIM participation) all converge on commercial dispatch.
+RTO administrators and certain FERC constituencies push for expanded
+market integration as a matter of broader policy. Cost-conscious
+appropriators look for ways to reduce federal commitment and would find
+commercialization attractive if it appears to reduce ratepayer or
+taxpayer burden. IOUs that lose generation business to TVA-acquired
+federal anchor plants could find commercialization useful as a way to
+make the program’s structure more vulnerable to future
+market-integration-driven dilution.</p>
+<p>The structural protections built into the program design (statutory
+reservation of reliability vintage for emergency exchange use only,
+Federal Anchor Authority dispatch control, TVA dispatch over
+home-jurisdiction segments, explicit prohibition on participation in
+commercial dispatch markets) are necessary but not sufficient on their
+own. Political pressure for commercialization will accumulate over time
+as the new physical interconnections become routine and as
+cost-conscious appropriations cycles probe for ways to reduce federal
+commitment.</p>
+<p>The proactive framing required is that the reliability vintage is
+reserved emergency infrastructure paid for under a defined cost recovery
+architecture, and that commercialization would compromise the structural
+integrity of TVA’s market independence in ways that aren’t recovered by
+the modest monetization the commercialization advocates project. The
+layered cost recovery architecture is itself the strongest defense
+because it forecloses the “wasted infrastructure” framing: if
+hyperscalers are explicitly paying for the reliability vintage as
+infrastructure they benefit from, ratepayers’ share is bounded, and
+federal appropriations cover the tail share, the “capacity sitting idle”
+rhetoric collapses. The capacity isn’t wasted — it’s reserved
+infrastructure that every party with stake understands and is paying for
+as such.</p>
+<h3 id="building-the-counter-coalition">Building the
+Counter-Coalition</h3>
+<p>The opposition is substantial but not unanimous, and several
+political forces align favorably with the proposal. Public power trade
+associations (American Public Power Association, National Rural Electric
+Cooperative Association) will support the program as a meaningful
+expansion of public power’s role in federal energy policy. Hyperscaler
+companies will support the program because it solves their clean firm
+capacity problem at predictable cost — though they will negotiate on
+specific terms, particularly the Reserve Fund contribution magnitude and
+the construction-period advance contributions. The nuclear manufacturing
+supply chain (Westinghouse and its many subcontractors) will support the
+program as a major source of new AP1000 orders. National security and AI
+competitiveness advocates will support the program as a strategic
+infrastructure response to PRC competition. Climate and decarbonization
+advocates will support the program for its emissions reduction
+potential.</p>
+<p>Specific states benefit asymmetrically. Tennessee, Alabama,
+Mississippi, Virginia, North Carolina, and Georgia are direct
+beneficiaries through the TVA-led Phase 1 pilots. New York and Nebraska
+benefit through Phase 2 pilots. States with significant nuclear
+manufacturing supply chains (Pennsylvania, Ohio, South Carolina) benefit
+through jobs and economic activity. The combined geographic distribution
+of program benefits should provide a credible base of Congressional
+support.</p>
+<p>The interregional transmission advocate community is a more uncertain
+coalition member. The advocate community supports the program’s
+underlying purpose (new interregional capacity addressing resource
+adequacy needs) but has substantive disagreement with the proposal’s
+design choice to wall the reliability vintage off from commercial
+dispatch markets. Whether the advocate community supports or opposes the
+program depends substantially on how proponents engage with them during
+the legislative process and how the reliability vintage’s market posture
+is framed.</p>
+<p>The opposition’s most effective angle of attack is the “fairness”
+argument: the program creates competitive asymmetries between public and
+private utilities and between IOUs in different regions. The strongest
+counter is the substantive case that the public-preference principle has
+worked in U.S. federal power policy for nearly a century, has
+demonstrated long-term durability, and addresses real market failures
+that purely private mechanisms have not solved. The opposition’s
+strongest substantive angle is the “moral hazard” argument: federal
+absorption of construction risk reduces the incentive for cost
+discipline. Version 2.0’s POU first-loss absorption layer (100-120% of
+acquisition price) substantially addresses this concern, as does the
+hyperscaler Reserve Fund’s first-tier risk absorption above POU
+absorption.</p>
+<p>Neither counter is dispositive, and the political fight will be real.
+But the substantive case is defensible on its merits, the coalition of
+supporters is meaningful in scale, and the structural alternatives are
+each substantially worse than the program this proposal outlines.</p>
+<h2 id="political-risk-mitigation">Political Risk Mitigation</h2>
+<p>The opposition forces identified above are real, but each can be
+partially addressed through specific structural concessions that
+preserve the proposal’s core architecture while reducing the political
+cost of opposition. The trade-offs are explicit: every concession that
+softens opposition complicates the proposal’s structure or dilutes the
+public-preference principle to some degree. The right mitigation package
+is one that buys enough political acceptance to enable enactment without
+unwinding the structural features that make the proposal work.</p>
+<h3 id="mitigating-adjacent-iou-opposition-minority-ownership-slices">Mitigating
+Adjacent IOU Opposition: Minority Ownership Slices</h3>
+<p>The most significant single mitigation — and the one most likely to
+convert Phase 1 IOU partners from conditional opponents to active
+supporters — is to permit those IOUs to take minority ownership slices
+in the plants alongside TVA as the majority acquirer. This co-ownership
+variant adds some structural complexity to the federal-balance-sheet
+construction model, but it can be incorporated as a defined option
+rather than as the architectural default.</p>
+<p>Under this mitigation, the federal government builds the plant on the
+federal balance sheet as in the base proposal. At commercial operation,
+the plant is transferred jointly to TVA and one or more IOU minority
+co-owners at the agreed acquisition price, with TVA holding 60-70% of
+the plant and IOU partner(s) holding 30-40% collectively. TVA remains
+the operator and the lead acquirer; the IOU’s minority position is
+purely economic, providing rate-base ownership in generation without
+operational responsibility. The IOU’s share of the acquisition price is
+financed through normal IOU capital structure with state-regulated rate
+base recovery; TVA’s share is financed through its expanded debt
+authority.</p>
+<p>This gives Southern Company, Duke, and Dominion something
+substantial: a rate-base position in the new federal nuclear fleet.
+Vogtle 3 &amp; 4 cost Southern Company roughly 2.5x the original
+estimate, but Southern still earned regulated return on its share
+throughout the project’s life. A 30% co-ownership position in a
+federally-built AP1000 at the original-estimate acquisition price gives
+Southern an equivalent rate-base position at substantially lower risk
+and cost than Vogtle, because the IOU’s exposure is bounded by the
+layered cost recovery architecture. Dominion gets a meaningful nuclear
+rate-base position without having to navigate Virginia regulatory
+approval for in-state construction. Duke gets a defined entry into
+nuclear ownership without bearing first-of-a-kind execution risk.</p>
+<p>The complications are real. First, the federal-balance-sheet
+construction model and the layered cost recovery architecture are
+structurally simpler with a single POU acquirer. Multiple acquirers
+require defining how POU first-loss absorption is allocated, how the
+Reserve Fund disburses to multiple parties, and how state PUC prudency
+reviews handle a federally-set acquisition price for IOU co-owners.
+Second, the public-preference principle is partially diluted: IOU
+rate-base position in generation means some share of operating economics
+flows to IOU shareholders rather than to public-utility ratepayers.
+Third, the legislative drafting is more complex because the program must
+specify how mixed-acquirer projects are handled differently from
+single-acquirer projects.</p>
+<p>The case for accepting these complications is the political
+acceptance they buy. The minority co-ownership option moves the affected
+IOUs from being conditional opponents to being aligned supporters, which
+is a major political shift even if it dilutes the structural purity of
+the proposal.</p>
+<h3 id="mitigating-non-adjacent-iou-opposition-geographic-program-expansion">Mitigating
+Non-Adjacent IOU Opposition: Geographic Program Expansion</h3>
+<p>The non-adjacent IOU opposition is best addressed by Phase 2
+geographic expansion. NYPA in New York, NPPD/OPPD/LES in Nebraska, LADWP
+in California, SRP in Arizona, CPS Energy in Texas, JEA in Florida —
+each Phase 2 pilot creates IOU participation opportunities in additional
+regions, reducing the share of IOUs that get nothing from the program.
+The geographic expansion is parallel to Phase 1, not sequential, so
+non-adjacent IOU opposition can be mitigated during the initial
+enactment phase rather than deferred to a later expansion.</p>
+<p>Complementary mitigations include tiered IOU eligibility for
+transmission rate-base position even where the IOU isn’t a destination
+for federal anchor program deliveries (allowing IOUs to invest in
+interregional transmission infrastructure with federal credit
+enhancement, while construction-cost-overrun absorption for plants
+remains public-utility-only). This expands the IOU constituency that
+benefits from the program without diluting the cost-overrun absorption
+layer that’s the core of the public-preference principle.</p>
+<h3 id="constellation-and-ipp-opposition-no-concessions-sequenced-engagement">Constellation
+and IPP Opposition: No Concessions, Sequenced Engagement</h3>
+<p>Version 2.0 adopts a different posture toward IPP opposition than
+Version 1.0 contemplated. The IPP opposition has more credibility on
+technical grounds than the EEI opposition, but acceding to IPP demands
+for federal cost-overrun absorption or Reserve Fund eligibility would
+fundamentally compromise the public-preference principle the program is
+built on. The decision is that the program’s concession bandwidth is
+better spent on adjacent IOU minority co-ownership (where the structural
+integrity can be partially preserved) than on IPP accommodations (where
+the structural integrity unravels).</p>
+<p>The IPP opposition is therefore managed through three mechanisms
+rather than through structural concessions. First, sequenced engagement:
+the IPP opposition is most effective if mobilized early. The program’s
+authorizing legislation can be structured to provide for future Phase 3
+review of IPP-related issues, providing IPPs with a defined channel for
+future engagement without committing to specific accommodations during
+initial enactment. Second, operating partnership opportunities: federal
+anchor program plants acquired by TVA could potentially be operated
+under contract by IPP operators (Constellation has the deepest
+commercial nuclear operations expertise), with operational decisions
+remaining subject to public-utility approval, plant ownership remaining
+with the public utility, and federal cost-overrun absorption flowing
+only to the public-utility acquirer. Third, supply chain participation:
+IPPs that participate in the federal anchor program’s nuclear supply
+chain (construction contracting, fuel cycle services, specialized
+maintenance) maintain meaningful commercial relationships with the
+program even without being acquirers.</p>
+<p>The honest framing is that the IPP opposition will be substantial and
+the program will have to absorb it rather than mitigate it through
+structural accommodation. The public-preference principle requires that
+direct federal supports flow only to public utilities; any expansion of
+those supports to IPPs unravels the principle. The trade-off is real
+political cost during enactment in exchange for structural integrity of
+the program.</p>
+<h3 id="mitigating-state-puc-opposition-state-level-engagement-and-optional-participation">Mitigating
+State PUC Opposition: State-Level Engagement and Optional
+Participation</h3>
+<p>The state PUC opposition is partially addressed by making IOU
+participation in the program optional at the state level. The Federal
+Anchor Generation Authority does not compel any IOU to participate. A
+state PUC that opposes IOU participation can simply not approve the
+IOU’s request to participate, and the program continues without that
+IOU. The political effect is that state PUC opposition shifts from being
+a federal-level lobbying force to being a state-level decision point
+where each state independently chooses whether to participate.</p>
+<p>A complementary mitigation is targeted state-level engagement during
+the federal legislative process. State PUCs with concerns about the
+program can be engaged through formal consultation requirements,
+providing them with structured opportunities to shape program terms in
+ways that reduce their concerns. NARUC (the National Association of
+Regulatory Utility Commissioners) can be engaged as a federal-level
+interlocutor for state PUC concerns.</p>
+<p>The package-deal framing developed in the main proposal substantially
+addresses the substantive grounds on which state PUCs would approve
+destination IOU participation, particularly for the reliability vintage
+rate-base absorption layer. Virginia’s VSCC presents the strongest
+substantive case given Virginia-specific structural pressures (VCEA
+compliance, PJM capacity volatility, Northern Virginia data center
+concentration). The other Phase 1 destination states present calibrated
+versions of similar logic.</p>
+<h3 id="mitigating-interregional-transmission-advocate-opposition">Mitigating
+Interregional Transmission Advocate Opposition</h3>
+<p>The interregional transmission advocate community presents a
+different kind of opposition than the IOU/IPP/PUC opposition. The
+advocates support the program’s underlying purpose (new interregional
+capacity) but disagree with the proposal’s design choice on reliability
+vintage commercialization. Mitigation here is partly substantive
+(engaging with their concerns on the merits) and partly rhetorical
+(framing the program in ways that fit their existing analytical
+infrastructure).</p>
+<p>The substantive mitigation is to <strong>frame the reliability
+vintage as ELCC-accredited capacity</strong> to the extent the program
+can do so consistent with the design choice to wall it off from
+commercial dispatch markets. The Brooks/Silverstein/Gramlich June 2025
+Grid Strategies report’s analytical framework is compatible with ELCC
+accreditation that doesn’t require continuous commercial energy flows —
+accreditation reflecting the reliability vintage’s resource adequacy
+contribution during stress events. PJM and MISO would need to develop
+accreditation mechanisms that don’t currently exist (PJM today
+“attributes very little resource adequacy value to existing
+interregional transmission and zero value to new interregional
+transmission”), which is a substantial regulatory ask, but it positions
+the program within the analytical framework the advocate community has
+developed rather than outside it.</p>
+<p>The rhetorical mitigation is to drop “dark headroom” or
+“uncommercialized reserve” framing and adopt language the advocate
+community uses: “ELCC-accredited reliability vintage,” “bidirectional
+resilience capacity,” “interregional resource adequacy infrastructure.”
+The conceptual content is the same; the framing makes the proposal
+legible to Grid Strategies, ACEG, ESIG, Brattle, and Niskanen.</p>
+<p>The structural mitigation is to <strong>engage the advocate community
+early</strong> for collaborative work on what one of the Stage 4
+recommendations in the underlying analysis calls “a white paper on
+reliability-vintage compensation models.” No such paper currently
+exists, and the federal anchor proposal could fund or co-author one —
+filling a literature gap that the advocate community has not yet
+addressed and giving the advocate community structural ownership of the
+analytical infrastructure for the federal anchor program’s reliability
+vintage. The natural co-authors are Pfeifenberger (Brattle),
+Brooks/Silverstein/Gramlich (Grid Strategies/ACEG), Allen/Reed
+(Niskanen), and Lasher (ESIG transmission resilience task force).</p>
+<p>These mitigations don’t fully eliminate the tension between the
+program’s design and the advocate community’s preferences, but they
+substantially reduce the opposition intensity and position the proposal
+as a structural variant of the advocate community’s general direction
+rather than as a structural alternative to it.</p>
+<h3 id="mitigating-commercialization-as-wedge-statutory-protections-plus-sustained-advocacy">Mitigating
+Commercialization-as-Wedge: Statutory Protections Plus Sustained
+Advocacy</h3>
+<p>The commercialization-as-wedge critique requires a different
+mitigation than the broader advocate community engagement because it
+operates as a sophisticated structural attack rather than as a
+substantive disagreement.</p>
+<p>The principal structural mitigation is statutory protection of the
+reliability vintage from commercialization. Federal authorizing
+legislation should explicitly reserve the reliability vintage capacity
+for emergency exchange use only, with prohibition on participation in
+commercial dispatch markets (RTOs, EIMs including SEEM expansion,
+bilateral commercial arrangements). The Federal Anchor Authority
+dispatch control over cross-jurisdictional reliability vintage segments
+and TVA dispatch control over home-jurisdiction segments should both be
+specified statutorily. This makes commercialization require new federal
+legislation, not just administrative reinterpretation by future program
+leadership.</p>
+<p>The supplementary mitigation is the layered cost recovery
+architecture itself. The “wasted infrastructure” framing depends on
+characterizing the reliability vintage as ratepayer money sitting idle;
+if hyperscalers are explicitly paying for it as reliability
+infrastructure they benefit from, ratepayers’ share is bounded, and
+federal appropriations cover the tail share, the framing collapses. The
+architecture has to be communicated proactively in the program’s written
+record and in proponent advocacy from the beginning, because reactive
+responses to commercialization arguments tend to be defensive and
+unconvincing.</p>
+<p>The honest acknowledgment is that even with these mitigations,
+political pressure for commercialization will accumulate over time.
+Sustaining the program’s structural integrity will require ongoing
+political commitment from public power constituencies and from federal
+program leadership across multiple administrations. This is the same
+dynamic BPA has navigated for decades with the Pacific Intertie and
+Western EIM pressure, with mixed but mostly successful results. The
+federal anchor program should explicitly contemplate that the
+commercialization pressure will be a permanent feature of the political
+landscape rather than an opposition to be defeated once and for all.</p>
+<h3 id="the-mitigation-package">The Mitigation Package</h3>
+<p>A practical implementation of these mitigations produces the
+following package:</p>
+<p>The IOU minority co-ownership option is offered as a structural
+feature of the program from initial enactment, with the structural
+protections preserving the public-preference principle in modified form.
+This is the largest single mitigation and the one most likely to convert
+Phase 1 IOU partners from opponents to supporters.</p>
+<p>The Phase 2 geographic expansion to NYPA, Nebraska, LADWP, and others
+is pursued in parallel with Phase 1, reducing the non-adjacent IOU
+exclusion. The tiered IOU eligibility for transmission rate-base
+position (without cost-overrun absorption) is included from initial
+enactment to expand the IOU constituency without diluting the
+cost-overrun absorption layer.</p>
+<p>IPP opposition is managed without structural concessions through
+operating partnership opportunities, supply chain participation, and
+sequenced engagement for future Phase 3 review of IPP-related issues.
+The decision to spend concession bandwidth on IOU minority co-ownership
+rather than on IPP accommodation reflects the structural reality that
+IPP accommodations unravel the public-preference principle in ways that
+IOU minority co-ownership does not.</p>
+<p>State PUC engagement is structured through formal consultation
+requirements, NARUC interlocution, and optional participation at the
+state level. The package-deal framing in the main proposal provides the
+substantive grounds for state PUC approval of destination IOU
+participation.</p>
+<p>The interregional transmission advocate community is engaged through
+substantive (ELCC accreditation pursued), rhetorical (advocate community
+language adopted), and structural (collaborative white paper)
+mechanisms. The objective is to position the program within the advocate
+community’s analytical infrastructure rather than outside it.</p>
+<p>The commercialization-as-wedge critique is managed through statutory
+protections, the layered cost recovery architecture as proactive
+framing, and sustained political commitment across administrations.</p>
+<p>The cumulative effect of this mitigation package is a program that is
+structurally more complex than the base proposal but politically more
+viable. The public-preference principle is preserved in its substantive
+core while accommodating IOU and PUC participation in roles that align
+their interests with the program’s success. The political fight will
+still be real, but the coalition of supporters is larger and the
+opposition is narrower than the base proposal would produce.</p>
+<p>The honest assessment is that some version of this mitigation package
+is likely necessary for enactment. The base proposal — purely
+public-utility eligibility with no accommodation — is structurally
+cleaner but politically harder. The mitigation package described here
+represents a reasonable compromise between structural integrity and
+political achievability, with particular attention to the
+commercialization tension that Version 2.0 newly addresses.</p>
+</body>
+</html>
